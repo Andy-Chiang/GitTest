@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>要替換的話</p>
+    <textarea id="wordBefore" rows="6" cols="80" placeholder="請貼上要替換的文字"></textarea></textarea>
+    <table border="2">
+        <tr>
+            <th>替換前</th>
+            <th>替換後</th>
+        </tr>
+        <tr>
+            <td><input id="Shrimp1" placeholder="請貼上要替換文字 例如:草蝦" size="35"></td>
+            <td><input id="Replace1" placeholder="請貼上要替換文字 例如 黃色" size="35"></td>
+        </tr>
+        <tr>
+            <td><input id="Shrimp2" placeholder="請貼上要替換文字 例如:草蝦" size="35"></td>
+            <td><input id="Replace2" placeholder="請貼上要替換文字 例如 黃色" size="35"></td>
+        </tr>
+        <tr>
+            <td><input id="Shrimp3"  size="35"></td>
+            <td><input id="Replace3"  size="35"></td>
+        </tr>
+        <tr>
+            <td><input id="Shrimp4"  size="35"></td>
+            <td><input id="Replace4"  size="35"></td>
+        </tr>
+        <tr>
+            <td><input id="Shrimp5"  size="35"></td>
+            <td><input id="Replace5"  size="35"></td>
+        </tr>
+    </table>
+    </br>
+    <button onclick="replacrWord()">Enter</button>
+    </br>
+    <p>替換後的文字</p>
+    <textarea id="wordAfter" rows="6" cols="80" placeholder="替換後的文字"></textarea></textarea>
+    <script>
+        function replacrWord(){
+            var wordBefore = document.getElementById('wordBefore').value
+            
+            var Shrimp1 = document.getElementById('Shrimp1').value
+            var replace1 = document.getElementById('Replace1').value
+            
+            var Shrimp2 = document.getElementById('Shrimp2').value
+            var replace2 = document.getElementById('Replace2').value
+            
+            var Shrimp3 = document.getElementById('Shrimp3').value
+            var replace3 = document.getElementById('Replace3').value
+
+            var Shrimp4 = document.getElementById('Shrimp4').value
+            var replace4 = document.getElementById('Replace4').value
+
+            var Shrimp5 = document.getElementById('Shrimp5').value
+            var replace5 = document.getElementById('Replace5').value
+            //alert(document.getElementById('Shrimp5').value=='')
+            
+            if(document.getElementById('Shrimp1').value !='')
+                wordBefore=wordBefore.replaceAll(Shrimp1, replace1)
+            if(document.getElementById('Shrimp2').value !='')
+                wordBefore=wordBefore.replaceAll(Shrimp2, replace2)
+            if(document.getElementById('Shrimp3').value !='')
+                wordBefore=wordBefore.replaceAll(Shrimp3, replace3)
+            if(document.getElementById('Shrimp4').value !='')
+                wordBefore=wordBefore.replaceAll(Shrimp4, replace4)
+            if(document.getElementById('Shrimp5').value !='')
+                wordBefore=wordBefore.replaceAll(Shrimp5, replace5)
+            
+            
+            
+                //var relpace = wordBefore.replaceAll(Shrimp1, replace1).replaceAll(Shrimp2, replace2).replaceAll(Shrimp3, replace3).replaceAll(Shrimp4, replace4).replaceAll(Shrimp5, replace5)
+            document.getElementById('wordAfter').value=wordBefore
+        }
+        
+    </script>
+</body>
+</html>
